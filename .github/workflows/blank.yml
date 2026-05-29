@@ -15,7 +15,7 @@ jobs:
      - name: build step
        run: echo " this is build step"
   test:
-   runs-on: ubuntu-lates
+   runs-on: ubuntu-latest
    needs: build
    steps:
      - name: test step
