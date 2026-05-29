@@ -2,7 +2,7 @@ name: Action-workflow
 on:
  push:
    branches:
-     - feature
+     - main
      - dev
  pull_request:
    types: opened
@@ -20,7 +20,11 @@ jobs:
    steps:
      - name: test step
        run: echo " this is the test step "
- 
-
+  deploy:
+   runs-on: ubuntu-latest
+   needs: test
+   steps:
+     - name: secret & variables test
+       run: echo " my name is {{var.name}} and my password is {{secret.password}}"
 
 
