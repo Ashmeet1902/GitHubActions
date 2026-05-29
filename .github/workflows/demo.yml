@@ -1,0 +1,17 @@
+name: input demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environments:
+        description: "Choose the environment"
+        required: true
+        default: "dev"
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print input
+        run: echo "Selected environment is ${{ github.event.inputs.environments }}"
