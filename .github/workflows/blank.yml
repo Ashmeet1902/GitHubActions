@@ -1,0 +1,16 @@
+name: Action-workflow
+on:
+ push:
+   branches:
+     - main
+     - dev
+ pull_request:
+   types: opened
+   branches:
+     - main
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: build step
+       run: echo " this is build step"
