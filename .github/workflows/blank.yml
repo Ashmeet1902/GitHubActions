@@ -25,6 +25,6 @@ jobs:
    needs: test
    steps:
      - name: secret & variables test
-       run: echo " my name is {{var.name}} and my password is {{secret.password}}"
+       run: echo " my name is ${{vars.name}} and my password is ${{secrets.password}}"
 
 
