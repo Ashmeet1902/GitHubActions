@@ -2,7 +2,7 @@ name: Action-workflow
 on:
  push:
    branches:
-     - main
+     - feature
      - dev
  pull_request:
    types: opened
@@ -14,3 +14,13 @@ jobs:
    steps:
      - name: build step
        run: echo " this is build step"
+  test:
+   runs-on: ubuntu-lates
+   needs: build
+   steps:
+     - name: test step
+       run: echo " this is the test step "
+ 
+
+
+
