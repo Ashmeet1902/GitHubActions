@@ -31,7 +31,7 @@ jobs:
    needs: deploy
    steps:
      - name: checkout checking
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: reading 
        run: cat index.html
        
